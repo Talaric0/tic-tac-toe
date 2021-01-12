@@ -27,6 +27,11 @@ export default function Board() {
     return <Square value={boardSquares[index]} onClick={() => handleClick(index)} />
   }
 
+  // lazy reset function
+  function reset() {
+    document.location.reload()
+  }
+
   // init status
   let status;
   const winner = calculateWinner(boardSquares);
@@ -38,6 +43,11 @@ export default function Board() {
       <div className="board-row">{renderSquare(0)}{renderSquare(1)}{renderSquare(2)}</div>
       <div className="board-row">{renderSquare(3)}{renderSquare(4)}{renderSquare(5)}</div>
       <div className="board-row">{renderSquare(6)}{renderSquare(7)}{renderSquare(8)}</div>
+      <div className="reset-wrapper">
+        <button className="reset btn btn-outline-primary" onClick={reset}>
+            Reset
+        </button>
+      </div>
     </div>
   )
 }

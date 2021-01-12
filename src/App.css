@@ -36,3 +36,12 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.reset-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.reset {
+  margin-top: 10px;
+}
